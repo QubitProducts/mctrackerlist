@@ -46,4 +46,19 @@ describe("McTrackerList", function () {
     expect(mctrackerlist.match("www.elephantmouse.com/chickenwing.cup")).to.eql(false);
   });
 
+  describe("domain", function () {
+
+    beforeEach(function () {
+      mctrackerlist.compile([
+        // blacklist domain
+        "-d google-analytics.com /furrylegferret.js"
+      ]);
+    });
+
+    it("should match a substring in the domain", function () {
+      expect(mctrackerlist.match("https://ssl.google-analytics.com/furrylegferret.js")).to.eql(true);
+    });
+
+  });
+
 });

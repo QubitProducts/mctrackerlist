@@ -1,0 +1,27 @@
+{
+  "name": "mctrackerlist",
+  "version": "1.0.0",
+  "description": "A utility lib to facilitate working with Tracking Protection Lists",
+  "main": "mctrackerlist.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/*_test.js && karma start --single-run"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:qubitdigital/mctrackerlist.git"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "karma": "^0.12.28",
+    "karma-browserify": "^1.0.1",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-mocha": "^0.1.10",
+    "mocha": "^2.0.1"
+  }
+}

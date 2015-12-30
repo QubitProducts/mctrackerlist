@@ -1,10 +1,10 @@
 {
   "name": "mctrackerlist",
   "version": "1.0.0",
-  "description": "A utility lib to facilitate working with Tracking Protection Lists",
+  "description": "A Tracking Protection List lib for node and the browser",
   "main": "mctrackerlist.js",
   "directories": {
-    "test": "test"
+    "test": "make test"
   },
   "scripts": {
     "test": "mocha test/*_test.js && karma start --single-run"
@@ -16,12 +16,14 @@
     "url": "git@github.com:qubitdigital/mctrackerlist.git"
   },
   "devDependencies": {
-    "chai": "^1.10.0",
-    "karma": "^0.12.28",
-    "karma-browserify": "^1.0.1",
-    "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^0.1.7",
-    "karma-mocha": "^0.1.10",
-    "mocha": "^2.0.1"
+    "chai": "^3.4.1",
+    "istanbul": "^0.4.1",
+    "karma": "^0.13.16",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-mocha": "^0.2.1",
+    "karma-sourcemap-loader": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "standard": "^5.4.1",
+    "webpack": "^1.12.9"
   }
 }

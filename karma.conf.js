@@ -1,22 +1,16 @@
-module.exports = function(karma) {
-  karma.set({
-
-    frameworks: [ 'browserify', 'mocha', 'chai'],
-    files: [
-        'test/**/*_test.js',
-        {pattern: 'test/**/*.js', included: false}
-    ],
-    preprocessors: {
-      'test/**/*_test.js': [ 'browserify' ]
+module.exports = function (config) {
+  config.set({
+    frameworks: ['mocha'],
+    files: [ 'test/**/test-*' ],
+    preprocessors: { 'test/**/test-*': ['webpack', 'sourcemap'] },
+    webpack: {
+      watch: true,
+      devtool: 'inline-source-map'
     },
-
-    browserify: {
-      debug: true
+    webpackServer: {
+      quiet: true,
+      noInfo: true
     },
-
-    autoWatch: true,
-
     browsers: ['Chrome']
-
-  });
-};
+  })
+}

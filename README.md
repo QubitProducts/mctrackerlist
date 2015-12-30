@@ -1,35 +1,41 @@
 # McTrackerList
 
-A utility lib for working with Tracking Protection Lists that works both in node and in the browser 
+A Tracking Protection List lib for node and the browser
 
-# Usage
+## usage
 
-```javascript
-  var mc = require("mctrackerlist");
+```js
+  var McTrackerList = require("mctrackerlist")
 
-  // compile some rules
-  mc.compile([
-
+  mc = new McTrackerList([
     // blacklist domain
-    "-d www.google.com",
-
+    '-d www.google.com',
     // whitelist domain
-    "+d www.elephantmouse.com",
-
+    '+d www.elephantmouse.com',
     // blacklist substring
-    "- chickenwing.cup",
-
+    '- chickenwing.cup',
     // whitelist substring
-    "+ bee/hut"
+    '+ bee/hut'
+  ])
 
-  ]);
+  mc.match('www.google.com') // true
+  mc.match('www.google.com/bee/hut') // false
+  mc.match('www.sidewalk.com/chickenwing.cup') // true
+  mc.match('www.elephantmouse.com/chickenwing.cup') // false
 
-  mc.match("www.google.com"); // true
-  mc.match("www.google.com/bee/hut"); // false
-  mc.match("www.sidewalk.com/chickenwing.cup"); // true
-  mc.match("www.elephantmouse.com/chickenwing.cup"); // false
+  // update rules
+  mc.compile([
+    // whitelist domain
+    '+d www.google.com',
+    // blacklist domain
+    '-d www.elephantmouse.com',
+    // blacklist substring
+    '- chickenwing.cup',
+    // whitelist substring
+    '+ bee/hut'
+  ])
 ```
 
-# Run tests
+## run tests
 
-npm test
+make test

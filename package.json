@@ -4,16 +4,16 @@
   "description": "A Tracking Protection List lib for node and the browser",
   "main": "mctrackerlist.js",
   "directories": {
-    "test": "make test"
+    "test": "test"
   },
   "scripts": {
     "test": "mocha test/*_test.js && karma start --single-run"
   },
-  "author": "",
+  "author": "Alan Clarke <alan@qubit.com> (qubit.com)",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.com:qubitdigital/mctrackerlist.git"
+    "url": "git+ssh://git@github.com/qubitdigital/mctrackerlist.git"
   },
   "devDependencies": {
     "chai": "^3.4.1",
@@ -25,5 +25,10 @@
     "karma-webpack": "^1.7.0",
     "standard": "^5.4.1",
     "webpack": "^1.12.9"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/qubitdigital/mctrackerlist/issues"
+  },
+  "homepage": "https://github.com/qubitdigital/mctrackerlist#readme",
+  "keywords": []
 }

@@ -1,6 +1,6 @@
 {
   "name": "mctrackerlist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Tracking Protection List lib for node and the browser",
   "main": "mctrackerlist.js",
   "directories": {
